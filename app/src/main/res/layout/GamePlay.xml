@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="#000000"
+    tools:context=".GamePlay">
+
+    <TextView
+        android:id="@+id/playersTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="125dp"
+        android:gravity="center"
+        android:onClick="goToHomeScreen"
+        android:text="Player 1's Turn"
+        android:textColor="#DD5583"
+        android:textSize="30sp" />
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gird3x3"
+        app:columnCount="3"
+        app:rowCount="3"
+        app:useDefaultMargins="true"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="154dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="109dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:onClick="dropIn"
+            android:tag="0"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="109dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="5dp"
+            android:onClick="dropIn"
+            android:tag="1"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="109dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="5dp"
+            android:onClick="dropIn"
+            android:tag="2"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="109dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            android:onClick="dropIn"
+            android:tag="3"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="109dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="16dp"
+            android:onClick="dropIn"
+            android:tag="4"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="109dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="16dp"
+            android:onClick="dropIn"
+            android:tag="5"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="109dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:onClick="dropIn"
+            android:tag="6"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="109dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="15dp"
+            android:onClick="dropIn"
+            android:tag="7"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="109dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="15dp"
+            android:onClick="dropIn"
+            android:tag="8"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+    </android.support.v7.widget.GridLayout>
+
+    <LinearLayout
+        android:id="@+id/playAgainLinearLayout"
+        android:layout_width="362dp"
+        android:layout_height="249dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:alpha="1"
+        android:animateLayoutChanges="true"
+        android:background="#383232"
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:visibility="invisible"
+        app:layout_column="3"
+        app:layout_row="0">
+
+        <TextView
+            android:id="@+id/winnertext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/playAgainButton"
+            android:layout_alignStart="@+id/playAgainLinearLayout"
+            android:layout_gravity="start"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="5dp"
+            android:shadowColor="#00FFFFFF"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/playAgainButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="#CE3E74"
+            android:onClick="playAgain"
+            android:text="Play Again"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

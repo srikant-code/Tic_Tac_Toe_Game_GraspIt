@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="#000000"
+    tools:context=".SettingsPanel">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="496dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout2">
+
+        <ImageView
+            android:id="@+id/threeSec"
+            android:layout_width="95dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/group28" />
+
+        <ImageView
+            android:id="@+id/tenSec"
+            android:layout_width="95dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/group29" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="456dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+        <ImageView
+            android:id="@+id/notificationON"
+            android:layout_width="95dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/group47" />
+
+        <ImageView
+            android:id="@+id/notificationOFF"
+            android:layout_width="95dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/group48" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="214dp"
+        android:layout_height="433dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/addPlayers"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            app:srcCompat="@drawable/group147timer" />
+
+        <ImageView
+            android:id="@+id/howToPlay"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/addPlayers"
+            android:layout_alignStart="@+id/addPlayers"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@drawable/group148"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+        <ImageView
+            android:id="@+id/highScore"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/howToPlay"
+            android:layout_alignStart="@+id/howToPlay"
+            android:layout_alignEnd="@+id/howToPlay"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@drawable/group149"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+        <ImageView
+            android:id="@+id/playOnline"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/highScore"
+            android:layout_alignStart="@+id/highScore"
+            android:layout_alignEnd="@+id/highScore"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@drawable/group150"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+        <ImageView
+            android:id="@+id/timerON"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/playOnline"
+            android:layout_alignStart="@+id/playOnline"
+            android:layout_alignEnd="@+id/playOnline"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@drawable/group151"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+        <ImageView
+            android:id="@+id/sendInvite"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/timerON"
+            android:layout_alignStart="@+id/timerON"
+            android:layout_alignEnd="@+id/timerON"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@drawable/group152"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+        <ImageView
+            android:id="@+id/settingsOption"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/sendInvite"
+            android:layout_alignStart="@+id/sendInvite"
+            android:layout_alignEnd="@+id/sendInvite"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@drawable/group153"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+        <ImageView
+            android:id="@+id/rateMe"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/settingsOption"
+            android:layout_alignStart="@+id/settingsOption"
+            android:layout_alignEnd="@+id/settingsOption"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@drawable/group154"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+        <ImageView
+            android:id="@+id/developerDetails"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/rateMe"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@drawable/group_147_developerdetails"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+        <ImageView
+            android:id="@+id/moreGames"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/developerDetails"
+            android:layout_alignStart="@+id/developerDetails"
+            android:layout_alignEnd="@+id/developerDetails"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@drawable/group155"
+
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:onClick="goToHomeScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iconmaterial_arrow_back" />
+
+    <ImageView
+        android:id="@+id/settingsButton"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iconmaterial_settings" />
+    <ImageView
+        android:id="@+id/homeButton"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="65dp"
+        android:onClick="goToHomeScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iconmaterial_home" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="How are you feeling?"
+        android:textColor="#FFFFFF"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/happinessFactor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/happinessFactor"
+        android:layout_width="177dp"
+        android:layout_height="31dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90999997">
+
+        <ImageView
+            android:id="@+id/facebookIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:srcCompat="@drawable/icon_material_sentiment_very_dissatisfied" />
+
+        <ImageView
+            android:id="@+id/instagramIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:srcCompat="@drawable/icon_material_sentiment_dissatisfied" />
+
+        <ImageView
+            android:id="@+id/linkedinIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:srcCompat="@drawable/icon_material_sentiment_neutral" />
+
+        <ImageView
+            android:id="@+id/twitterIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:srcCompat="@drawable/icon_material_sentiment_satisfied" />
+
+        <ImageView
+            android:id="@+id/githubIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:padding="-2dp"
+            android:paddingTop="4dp"
+            app:srcCompat="@drawable/icon_material_sentiment_very_satisfied" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
