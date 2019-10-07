@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Tic Tac Toe</string>
+    <string name="how_are_you_feeling">How are you feeling?</string>
+    <string name="player_1_s_turn">Player 1\'s Turn</string>
+    <string name="play_again">Play Again</string>
+    <string name="swipe_up_to_continue">Swipe up to continue</string>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,35 +7,48 @@
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true"
     android:background="#000000"
+    tools:ignore="onClick"
     tools:context=".GamePlay">
 
     <TextView
         android:id="@+id/playersTurn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginBottom="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:onClick="goToHomeScreen"
-        android:text="Player 1's Turn"
+        android:text="@string/player_1_s_turn"
         android:textColor="#DD5583"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.078" />
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="360dp"
         android:layout_height="360dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/gird3x3"
         app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:rowCount="3"
-        app:useDefaultMargins="true"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="154dp">
+        app:useDefaultMargins="true">
 
         <ImageView
             android:id="@+id/imageView4"
@@ -143,7 +156,10 @@
         android:layout_width="362dp"
         android:layout_height="249dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:alpha="1"
         android:animateLayoutChanges="true"
         android:background="#383232"
@@ -151,18 +167,20 @@
         android:padding="50dp"
         android:visibility="invisible"
         app:layout_column="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_row="0">
 
         <TextView
             android:id="@+id/winnertext"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/playAgainButton"
-            android:layout_alignStart="@+id/playAgainLinearLayout"
             android:layout_gravity="start"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
-            android:gravity="center_vertical|right"
+            android:gravity="center_vertical"
             android:paddingBottom="5dp"
             android:shadowColor="#00FFFFFF"
             android:text=""
@@ -178,10 +196,22 @@
             android:layout_weight="1"
             android:background="#CE3E74"
             android:onClick="playAgain"
-            android:text="Play Again"
+            android:text="@string/play_again"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="626dp"
+        android:layout_height="624dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
+        app:srcCompat="@drawable/gird3x3" />
 
-</RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

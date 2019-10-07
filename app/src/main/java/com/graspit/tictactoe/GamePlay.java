@@ -1,14 +1,14 @@
 package com.graspit.tictactoe;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class GamePlay extends HomeScreen {
+public class GamePlay extends AppCompatActivity {
 
         int activePlayer = 0;   //0=cross    1=circle
 
@@ -104,15 +104,20 @@ public class GamePlay extends HomeScreen {
                 ((ImageView) gridLayout.getChildAt(i)).setImageResource(0);
 
         }
-
-        @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.GamePlay);
+        setContentView(R.layout.activity_game_play);
+
+        TextView playersTurnText = findViewById(R.id.playersTurn);
+        playersTurnText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent homescreen = new Intent(GamePlay.this,SettingsPanel.class);
+                startActivity(homescreen);
+                finish();
+            }
+        });
     }
 
-    public void goToHomeScreen(View view) {
-        Intent gotoHomeScreen = new Intent(this, HomeScreen.class);
-        startActivity(gotoHomeScreen);
-    }
 }

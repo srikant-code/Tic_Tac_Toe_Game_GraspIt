@@ -8,17 +8,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 
-public class SettingsPanel extends GamePlay {
+public class SettingsPanel extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_panel);
 
+
         //CODE TO HIDE STATUS BAR
 
-        if (Build.VERSION.SDK_INT < 16) {
+        /*if (Build.VERSION.SDK_INT < 16) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
@@ -44,11 +47,24 @@ public class SettingsPanel extends GamePlay {
             ActionBar actionBar = getActionBar();
             actionBar.hide();
         }*/
-    }
+        ImageView backbutton = findViewById(R.id.backButton);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goToMainActivity = new Intent(SettingsPanel.this,MainActivity.class);
+                startActivity(goToMainActivity);
+                finish();
+            }
+        });
 
-    public void goToHomeScreen(View view)
-    {
-        Intent gotoHomeScreen = new Intent(this, HomeScreen.class);
-        startActivity(gotoHomeScreen);
+        ImageView homeButton = findViewById(R.id.homeButton);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent homeScreen = new Intent(SettingsPanel.this,GamePlay.class);
+                startActivity(homeScreen);
+                finish();
+            }
+        });
     }
 }
